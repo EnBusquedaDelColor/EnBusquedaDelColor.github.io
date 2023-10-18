@@ -5,7 +5,7 @@ body::-webkit-scrollbar-track {background: #b1b1b1 !important;}
 body::-webkit-scrollbar-thumb {background: #f0f0f0;border-radius: 2vmin;}
 .fondo-cuento
 {
-  background-image: url('../SVG/MarVerde.svg');
+  background-image: url('../IMG/Recursos/MarVerde.svg');
   background-size: auto;
   background-repeat: no-repeat;
   background-size:cover
