@@ -102,17 +102,17 @@ body::-webkit-scrollbar-thumb {background: #f0f0f0;border-radius: 2vmin;}
 }
 input[type="range"]::-webkit-slider-runnable-track {
     background: #4b1e0b;
-    height: 0.4vmin;
-    border-radius:4vmin
+    height: 0.4vh;
+    border-radius:4vh
   }
 
   input[type="range"]::-webkit-slider-thumb
   {
     -webkit-appearance: none;
-    height: 2.5vmin;
-    width: 2.5vmin;
+    height: 2.5vh;
+    width: 2.5vh;
     background-color:#4b1e0b;
-    margin-top: -1.05vmin;
+    margin-top: -1.05vh;
     border-radius: 100%;
   }
   
