@@ -6,6 +6,21 @@
   background-size:cover
 }
 
+.mensaje
+{
+  transition: ease-in-out 0.3s;
+  z-index: calc(inherit+1);
+  font-size: 2.4vmin;
+  position: absolute;
+  padding: 2px 1vmin;
+  background-color: #E9A032;
+  border-radius: 2vmin;
+  width: 25vmin;
+  text-align: center;
+  box-shadow: 0px 0px 3vmin #000000b7;
+}
+
+
 
 /*para sm*/
 @media (max-width:768px)
@@ -17,11 +32,26 @@
   .opc-item{margin-left: 0% !important;}
   .container-opc{top: 70vmin !important;}
   .opc-titulo{margin-left: 10% !important;margin-right: 20% !important;color: #090909;}
-
+  .mensaje-sm
+  {
+    top:46%;
+    left: 6%;
+  }
 }
 
 /*para md*/
 @media (min-width:768px){
+  .mensaje-md
+  {
+    top:75%;
+    left: -8%;
+  }
+  .mensaje-md:hover
+  {
+    top:calc(75% - 0.2vmin);
+    box-shadow: 0px 0px 3vmin #383838b7;
+    font-size: 2.6vmin;
+  }
   .opcion-func 
   {
     margin-left: 20%;
@@ -105,7 +135,6 @@
   box-shadow: 0px 0px 1.5vmin #6F3293;
   transition: ease-out 0.5s
 }
-
 
 
 
