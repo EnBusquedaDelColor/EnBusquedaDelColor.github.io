@@ -1,3 +1,17 @@
+.col-8{flex:0 0 auto;width:66.66666667%}
+.row{--bs-gutter-x: 1.5rem;width: 100%;margin: 0%;padding-right: calc(var(--bs-gutter-x) * .5);padding-left: calc(var(--bs-gutter-x) * .5);}
+.offset-2{margin-left:16.66666667%}
+.nav-link{display:block;padding:var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+    font-size:var(--bs-nav-link-font-size);font-weight:var(--bs-nav-link-font-weight);
+    color:var(--bs-nav-link-color);text-decoration:none;background:0 0;
+    border:0;transition:color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out}
+.d-inline-block{display:inline-block!important}
+.float-end{float:right!important}
+.container-fluid{--bs-gutter-x:1.5rem;--bs-gutter-y:0;width:100%;padding-right:calc(var(--bs-gutter-x) * .5);
+    padding-left:calc(var(--bs-gutter-x) * .5);margin-right:auto;margin-left:auto}
+.d-flex{display:flex!important}
+
+
 *{
     margin: 0;
     gap: 0;
@@ -32,7 +46,7 @@
     position: relative;
 }
 .sopaContainer{
-    background-image: url(FondoPresentacion.webp);
+    background-image: url("../FondoPresentacion.webp");
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
