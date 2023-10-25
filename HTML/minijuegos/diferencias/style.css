@@ -150,7 +150,7 @@ body{height: 100vh;overflow: hidden;}
     width: calc(7vmin * var(--proporcion));
     height: calc(5vmin * var(--proporcion));
     margin-top: calc(46vmin * var(--proporcion));
-    margin-left: calc(7vmin * var(--proporcion))34;
+    margin-left: calc(34vmin * var(--proporcion));
 }
 .difJ23{
     width: calc(7vmin * var(--proporcion));
@@ -174,7 +174,7 @@ body{height: 100vh;overflow: hidden;}
     width: calc(18vmin * var(--proporcion));
     height: calc(8vmin * var(--proporcion));
     margin-top: calc(33vmin * var(--proporcion));
-    margin-left: calc(7vmin * var(--proporcion));
+    margin-left: calc(1vmin * var(--proporcion));
     transform: rotate(-30deg);
 }
 .difJ12{
