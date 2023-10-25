@@ -1,6 +1,6 @@
 
 const urlPag = "../IMG/Paginas/PagArtboard"
-const cantPag = 12;
+const cantPag = 40;
 
 let barraTiempo = document.getElementById('barraTiempo'); //input range
 let audioContainer = document.getElementById('audio-container'); //contenedor

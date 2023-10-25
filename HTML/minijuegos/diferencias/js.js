@@ -3,7 +3,7 @@ var cantidad
 function cargarJuego(numJuego){
     var idA
     var idB
-    document.getElementById('containerGame').innerHTML+='<div class="contenedorImg"><div id="img1J'+numJuego+'"></div><div id="img2J'+numJuego+'"></div></div>'
+    document.getElementById('containerGame').innerHTML+='<div class="contenedorImg contenedorImg-sm"><div class="img-sm img-md" id="img1J'+numJuego+'"></div><div class="img-sm img-md" id="img2J'+numJuego+'"></div></div>'
     
     numJuego===1||numJuego===2? cantidad = 5 : cantidad=6
     
@@ -15,7 +15,7 @@ function cargarJuego(numJuego){
         idB = 'dif'+(i+1)+'B'
         document.getElementById('img2J'+numJuego).innerHTML+='<div class="difJ'+numJuego+''+(i+1)+'" id="'+idB+'" onclick="findDif('+idB+')"></div>'
     }
-    document.getElementById('cantidadDiferencias').innerHTML=(cantidad- diferencias.length)+'/'+cantidad
+    document.getElementById('cantidadDiferencias').innerHTML=(cantidad- diferencias.length)+' / '+cantidad
 }
 let modal = document.getElementById('ModalWin');
 
@@ -46,7 +46,7 @@ function findDif(id){
         document.getElementById(idOpposite).style.border='solid'
         id.style.border='solid'
         
-        document.getElementById('cantidadDiferencias').innerHTML=(cantidad-diferencias.length+1)+'/'+cantidad
+        document.getElementById('cantidadDiferencias').innerHTML=(cantidad-diferencias.length+1)+' / '+cantidad
         if(diferencias.length<=0)
             winGame()
         else

@@ -11,9 +11,7 @@
     <title>Encuentra las diferencias</title>
 </head>
 <body onload="cargarJuego((Math.floor(Math.random() * 3)+1))">
-    <div style="height: 100%;width: 100%;position: absolute;top: 0%;overflow: hidden;margin: 0%;z-index: -10;">
-        <img src="../FondoPresentacion.webp" class="fondo-container">
-    </div>
+    <div class="fondo-container" ></div>
     <div class="container-fluid">
         <!--Header-->
         <div class="row header" >
@@ -28,7 +26,7 @@
         </div>
     </div>
     <div class="flex" id="containerGame">
-        <div id="cantidadDiferencias"></div>
+        <div id="cantidadDiferencias" class="font-sinopsis cantidadDiferencias"></div>
     </div>
     <!--Modal-->
     <div class="modal-fondo" id="ModalWin">
