@@ -20,7 +20,6 @@ function CambiarImg(num)
 
 function CambiarAudioTimeStamps(pag)
 {
-    console.log(pag)
     let nuevoTiempo= 0;
     switch(pag)
     {
