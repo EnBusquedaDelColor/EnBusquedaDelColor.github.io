@@ -64,7 +64,6 @@ function handleLoad(){
     }
     
     var cells = document.getElementsByTagName('td');
-    console.log(cells)
     for(var i = 0;i<palabrasL.length;i++)
     {
         innerHTMLLE+="<span id='"+palabrasL[i].toLowerCase().trim().replace(" ", "")+"'>"+palabrasL[i]+"</span>"
@@ -113,7 +112,6 @@ function palabraEncontrada(idLetra){
     const dataArr = new Set(idLetra);
     let result = [...dataArr];
     var palabra = simplifyPalabra()
-    console.log(result)
     for(i=0;i<palabras.length;i++)
     {
         if(palabra.toString().trim().toUpperCase()==palabras[i].toString().trim().toUpperCase())
