@@ -28,6 +28,7 @@ function CambiarAudioTimeStamps(pag)
         case 4:
             audio.pause();
             playBtn.src="../IMG/Recursos/IconPlay.svg"
+            nuevoTiempo= "null";break;
             break;  
         case 5: nuevoTiempo= 3;break;  
         case 6: nuevoTiempo= 28;break; 
@@ -35,7 +36,7 @@ function CambiarAudioTimeStamps(pag)
         case 8: nuevoTiempo= 88;break; 
         case 9: nuevoTiempo= 110;break; 
         case 10: nuevoTiempo= 136;break; 
-        case 11: nuevoTiempo= 175;break; 
+        case 11: nuevoTiempo= 163;break; 
         case 12:
                 audio.pause();
                 playBtn.src="../IMG/Recursos/IconPlay.svg";
@@ -63,9 +64,9 @@ function CambiarAudioTimeStamps(pag)
         case 24: nuevoTiempo= 415;break; 
         case 25: nuevoTiempo= 442;break; 
         case 26: nuevoTiempo= 463.4;break; 
-        case 27: nuevoTiempo= 485.5;break; 
-        case 28: nuevoTiempo= 510.5;break; 
-        case 29: nuevoTiempo= 531;break; 
+        case 27: nuevoTiempo= 498;break; 
+        case 28: nuevoTiempo= 516.5;break; 
+        case 29: nuevoTiempo= 536;break; 
         case 30: nuevoTiempo= 560;break; 
         case 31: nuevoTiempo= 585;break; 
         case 32: nuevoTiempo= 610;break; 
@@ -76,12 +77,15 @@ function CambiarAudioTimeStamps(pag)
         case 37: 
         case 38: 
         case 39: 
-        case 40: 
+        case 40: nuevoTiempo= "null";break; 
         case 41: nuevoTiempo= 703;break; 
     }
     
-    audio.currentTime= nuevoTiempo;
-    barraTiempo.value= nuevoTiempo;
+    if(nuevoTiempo!="null")
+    {
+        audio.currentTime= nuevoTiempo;
+        barraTiempo.value= nuevoTiempo;
+    }
     
 }
 
@@ -94,7 +98,7 @@ function CambiarPagTimeStamps()
     else if (barraTiempo.value<88) pag=7;
     else if (barraTiempo.value<110) pag=8;
     else if (barraTiempo.value<136) pag=9;
-    else if (barraTiempo.value<175) pag=10;
+    else if (barraTiempo.value<163) pag=10;
     else if (barraTiempo.value<190) pag=11;
     else if (barraTiempo.value<209.3) pag=13;
     else if (barraTiempo.value<227) pag=14;
@@ -107,9 +111,9 @@ function CambiarPagTimeStamps()
     else if (barraTiempo.value<415) pag=22;
     else if (barraTiempo.value<442) pag=24;
     else if (barraTiempo.value<463.4) pag=25;
-    else if (barraTiempo.value<485.5) pag=26;
-    else if (barraTiempo.value<510.5) pag=27;
-    else if (barraTiempo.value<531) pag=28;
+    else if (barraTiempo.value<498) pag=26;
+    else if (barraTiempo.value<516.5) pag=27;
+    else if (barraTiempo.value<536) pag=28;
     else if (barraTiempo.value<560) pag=29;
     else if (barraTiempo.value<585) pag=30;
     else if (barraTiempo.value<610) pag=31;
@@ -123,21 +127,31 @@ function CambiarPagTimeStamps()
     return pag;
 }
 
+let lastPage=0;
 function CambiarContador(num)
 {
-    
-    if((parseInt(contadorPagina.value)+ parseInt(num)>0)&&(parseInt(contadorPagina.value)+ parseInt(num)<=cantPag))
+    let nuevaPage=parseInt(contadorPagina.value)+ parseInt(num);
+    if((nuevaPage>0)&&(nuevaPage<=cantPag))
     {
         let contador =parseInt(contadorPagina.value)+ parseInt(num);
-        contadorPagina.value = contador;
         CambiarImg(contador);
         CambiarAudioTimeStamps(contador);
+        contadorPagina.value = contador;
     }
     else if (num==0)
     {
-        contadorPagina.value = cantPag;
-        CambiarImg(cantPag)
+        if (!(((contadorPagina.value/1)==NaN)||((contadorPagina.value/1)==0)))
+        {
+            contadorPagina.value = lastPage;
+            CambiarImg(lastPage);
+        }
+        else if(nuevaPage>cantPag)
+        {
+            contadorPagina.value = cantPag;
+            CambiarImg(cantPag);
+        }
     }
+    lastPage= contadorPagina.value;
 }
 function CambioBarra()
 {
