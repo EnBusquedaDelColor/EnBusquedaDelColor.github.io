@@ -8,12 +8,23 @@ let audio = document.getElementById('audio'); // <audio>
 let playBtn = document.getElementById('playBtn'); // playBtn
 const contadorPagina = document.getElementById('contadorPagina');
 
+var imagenes = [];
+
+function CargarIMG()
+{
+    for (var i = 0; i < 40; i++) 
+    {
+        imagenes[i] = new Image();
+        imagenes[i].src = urlPag+(i+1)+'.webp';
+    }
+}
+
 function CambiarImg(num)
 {
     const contenedor = document.getElementById('contenedorPag');
     //contenedor.getElementsByClassName('img-fluid')[0].attributes.src.value;
 
-    contenedor.getElementsByClassName('img-fluid')[0].attributes.src.value= urlPag+num+'.webp';
+    contenedor.getElementsByClassName('img-fluid')[0].attributes.src.value= imagenes[num-1].src;
 }
 
 
@@ -235,7 +246,7 @@ addEventListener("load", () => {
     InicializarAudio();
     document.getElementById("contadorPagina").addEventListener("input", (event) => CambiarContador(0));
     document.getElementById("barraTiempo").addEventListener("input", (event) => CambioBarra());
-
+    CargarIMG();
 
 
 
